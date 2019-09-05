@@ -1,2 +1,2 @@
 # VideojuegoEnConsolaDeComandos
- VideoJuego programado en C++ ,  poniendo a prueba conocimientos adquiridos en algoritmica 1
+ VideoJuego programado en C++ , primeros pasos en la progrmaacion de videojuegos
