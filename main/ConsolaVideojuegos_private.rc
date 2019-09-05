@@ -1,0 +1,43 @@
+/* THIS FILE WILL BE OVERWRITTEN BY DEV-C++ */
+/* DO NOT EDIT! */
+/**
+  *
+  *
+  *@author: Andhersson Salazar
+  *@contact: andherson.salazar@gmail.com
+  *@date: march/2017
+  *
+  *
+  */
+#include <windows.h> // include for version info constants
+
+#include "recursos.rc"
+
+//
+// TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
+//
+1 VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+  {
+    BLOCK "280A04E4"
+    {
+      VALUE "CompanyName", "Andhersson Salazar.Inc"
+      VALUE "FileVersion", "1.0.0.0"
+      VALUE "FileDescription", "Developed using the Dev-C++ IDE by Andhersson Salazar"
+      VALUE "InternalName", "Andhersson Salazar"
+      VALUE "LegalCopyright", "MIT License"
+      VALUE "LegalTrademarks", ""
+      VALUE "OriginalFilename", "Andhersson Salazar"
+      VALUE "ProductName", "Consola De Videojuegos"
+      VALUE "ProductVersion", "1.0.0.0"
+    }
+  }
+  BLOCK "VarFileInfo"
+  {
+    VALUE "Translation", 0x280A, 1252
+  }
+}

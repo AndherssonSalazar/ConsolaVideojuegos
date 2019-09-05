@@ -1,0 +1,66 @@
+# Project: ConsolaVideojuegos
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+RES      = ConsolaVideojuegos_private.res
+OBJ      = ConsolaVideojuegos.o codigosfuente/Consola.o codigosfuente/nave/JuegoNave.o codigosfuente/nave/Meteorito.o codigosfuente/nave/Nave.o codigosfuente/nave/Proyectil.o codigosfuente/serpiente/Comida.o codigosfuente/serpiente/JuegoSerpiente.o codigosfuente/serpiente/Serpiente.o codigosfuente/Juego.o codigosfuente/laberinto/JuegoLaberinto.o codigosfuente/laberinto/Personaje.o $(RES)
+LINKOBJ  = ConsolaVideojuegos.o codigosfuente/Consola.o codigosfuente/nave/JuegoNave.o codigosfuente/nave/Meteorito.o codigosfuente/nave/Nave.o codigosfuente/nave/Proyectil.o codigosfuente/serpiente/Comida.o codigosfuente/serpiente/JuegoSerpiente.o codigosfuente/serpiente/Serpiente.o codigosfuente/Juego.o codigosfuente/laberinto/JuegoLaberinto.o codigosfuente/laberinto/Personaje.o $(RES)
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = ConsolaVideojuegos.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+ConsolaVideojuegos.o: ConsolaVideojuegos.cpp
+	$(CPP) -c ConsolaVideojuegos.cpp -o ConsolaVideojuegos.o $(CXXFLAGS)
+
+codigosfuente/Consola.o: codigosfuente/Consola.cpp
+	$(CPP) -c codigosfuente/Consola.cpp -o codigosfuente/Consola.o $(CXXFLAGS)
+
+codigosfuente/nave/JuegoNave.o: codigosfuente/nave/JuegoNave.cpp
+	$(CPP) -c codigosfuente/nave/JuegoNave.cpp -o codigosfuente/nave/JuegoNave.o $(CXXFLAGS)
+
+codigosfuente/nave/Meteorito.o: codigosfuente/nave/Meteorito.cpp
+	$(CPP) -c codigosfuente/nave/Meteorito.cpp -o codigosfuente/nave/Meteorito.o $(CXXFLAGS)
+
+codigosfuente/nave/Nave.o: codigosfuente/nave/Nave.cpp
+	$(CPP) -c codigosfuente/nave/Nave.cpp -o codigosfuente/nave/Nave.o $(CXXFLAGS)
+
+codigosfuente/nave/Proyectil.o: codigosfuente/nave/Proyectil.cpp
+	$(CPP) -c codigosfuente/nave/Proyectil.cpp -o codigosfuente/nave/Proyectil.o $(CXXFLAGS)
+
+codigosfuente/serpiente/Comida.o: codigosfuente/serpiente/Comida.cpp
+	$(CPP) -c codigosfuente/serpiente/Comida.cpp -o codigosfuente/serpiente/Comida.o $(CXXFLAGS)
+
+codigosfuente/serpiente/JuegoSerpiente.o: codigosfuente/serpiente/JuegoSerpiente.cpp
+	$(CPP) -c codigosfuente/serpiente/JuegoSerpiente.cpp -o codigosfuente/serpiente/JuegoSerpiente.o $(CXXFLAGS)
+
+codigosfuente/serpiente/Serpiente.o: codigosfuente/serpiente/Serpiente.cpp
+	$(CPP) -c codigosfuente/serpiente/Serpiente.cpp -o codigosfuente/serpiente/Serpiente.o $(CXXFLAGS)
+
+codigosfuente/Juego.o: codigosfuente/Juego.cpp
+	$(CPP) -c codigosfuente/Juego.cpp -o codigosfuente/Juego.o $(CXXFLAGS)
+
+codigosfuente/laberinto/JuegoLaberinto.o: codigosfuente/laberinto/JuegoLaberinto.cpp
+	$(CPP) -c codigosfuente/laberinto/JuegoLaberinto.cpp -o codigosfuente/laberinto/JuegoLaberinto.o $(CXXFLAGS)
+
+codigosfuente/laberinto/Personaje.o: codigosfuente/laberinto/Personaje.cpp
+	$(CPP) -c codigosfuente/laberinto/Personaje.cpp -o codigosfuente/laberinto/Personaje.o $(CXXFLAGS)
+
+ConsolaVideojuegos_private.res: ConsolaVideojuegos_private.rc recursos.rc
+	$(WINDRES) -i ConsolaVideojuegos_private.rc --input-format=rc -o ConsolaVideojuegos_private.res -O coff 
+
